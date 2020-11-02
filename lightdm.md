@@ -1,5 +1,15 @@
 # Lightdm
 
+Install lighdm with pacman.
+``` zsh
+sudo pacman -S lightdm
+```
+
+Not sure why, but optionally you might need to install accountsservice package as well.
+``` zsh
+sudo pacman -S accountsservice
+```
+
 ## Appearance
 
 Install webkit2 greeter:
