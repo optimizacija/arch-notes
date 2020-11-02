@@ -17,7 +17,7 @@ Add these lines to *~/.config/bspwm/bspwmrc*.
 ``` zsh
 # polybar
 # kill previous instance(s)
-ps aux | grep palenight-bar | sed '$d' | awk '{print $2}' | xargs kill
+killall -q polybar
 # create a new instance
 polybar palenight-bar &
 ```
