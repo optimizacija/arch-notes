@@ -15,14 +15,21 @@ ls -1 /usr/share/xgreeters/
 lightdm-webkit2-greeter.desktop
 ```
 
-Enable lightdm
+Enable lightdm:
+```
+sudo systemctl enable lightdm
+```
+
+Reboot machine.
 
 
 ## Keymap & Login Issues
 
-Lightdm takes xorg's keyboard settings into account. 
-If your password contains UTF-8 characters, you need to configure xorg keymap.
-Otherwise, lightdm uses US keyboard layout by default.
+Lightdm uses Xorg's keyboard settings. 
+This means if your password contains UTF-8 characters, 
+you'll need to configure Xorg keyboard settings.
+
+Otherwise, lightdm will use US keyboard layout by default.
 
 create `/etc/X11/xorg.conf.d/00-keyboard.conf`
 
@@ -39,9 +46,10 @@ More info [here](https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuratio
 
 ## Random Black Screens
 
-It may happen that lightdm will not start due to limited number of retries. To fix this
-add StartLimit\* fields to `[Unit]` and Restart\* fields to `[Service]`. Edit file with:
+It may happen that lightdm will not start due to limited number of retries.
+To fix this add StartLimit\* fields to `[Unit]` and Restart\* fields to `[Service]`. 
 
+Edit file with:
 ```
 sudo -E nvim /lib/systemd/system/lightdm.service
 ```
