@@ -71,8 +71,8 @@ Description=Light Display Manager
 Documentation=man:lightdm(1)
 Conflicts=getty@tty1.service
 After=getty@tty1.service systemd-user-sessions.service plymouth-quit.service acpid.service
-StartLimitInterval=70
-StartLimitBurst=60
+StartLimitInterval=60
+StartLimitBurst=10
 
 [Service]
 ExecStart=/usr/bin/lightdm
