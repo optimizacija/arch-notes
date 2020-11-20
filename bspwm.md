@@ -30,9 +30,9 @@ bspc rule -a Screenkey manage=off
 
 # polybar
 # kill previous instance(s)
-ps aux | grep palenight-bar | sed '$d' | awk '{print $2}' | xargs kill
+killall -q polybar
 # create a new instance
-polybar palenight-bar &
+polybar palenight-bar 2>/tmp/polybar.error &
 
 # background
 feh --bg-max "$HOME/images/wallpapers/0277.jpg"

@@ -17,5 +17,5 @@ touch "$HOME/.config/todotxt/todo.conf"
 
 Create an alias to load the correct config file every time.
 ``` zsh
-alias todo='todo.sh -d "$HOME/.config/todotxt/todo.cfg"'
+alias todo='todo.sh -d "$HOME/.config/todotxt/todo.conf"'
 ```
