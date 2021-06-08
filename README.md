@@ -1,5 +1,4 @@
 # Arch Linux Config Notes
-This repo contains notes on how to setup or fix certain parts of my Arch environment.
+A colleciton of notes on how to setup and/or fix various tools & other software in my Arch Linux environment.
 
-It is mostly a collection of tips & tricks that are otherwise hard to find on the internet.
-I know that I will have a hard time remembering them the next time around when starting over.
+It's just mostly a collection of tips & tricks that are otherwise hard to find on the internet.
