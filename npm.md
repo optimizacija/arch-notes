@@ -1,6 +1,6 @@
 # NPM
 
-## Configuring Global Packages
+## Configuring Global Packages (Deprecated)
 
 Create folder which will hold all globally installed npm packages
 
@@ -32,4 +32,20 @@ MANPATH="${NPM_PACKAGES}/share/man:$(manpath)"
 Create `$HOME/.npmrc` and edit the file.
 ```
 prefix=${HOME}/.config/npm-packages
+```
+
+## Using NVM
+
+Install nvm using aur
+
+``` zsh
+yay -S nvm
+
+# add nvm to path (this should be mentioned in the output from installing nvm in the previous command)
+echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.zshrc
+```
+
+Install version of node you prefer
+``` zsh
+nvm install 14
 ```
