@@ -29,3 +29,10 @@ docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t <user>/<n
 
 For any issues during the installation phase, check out these docs:
 https://github.com/tonistiigi/binfmt#installing-emulators
+
+### IMPORTANT
+
+Enable qemu everytime docker is restarted!
+```
+docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+```
