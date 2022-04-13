@@ -111,3 +111,51 @@ any applicaiton build on top of layer 1
     - arbitrum & optimism are rollups - they rollup their transaction into layer 1 ETH
 
 
+# Contracts
+
+## visibility modifiers:
+public, private, internal, external:
+- external - cannot be called within the same contract
+- internal - can only be called with other function inside the same contract
+- private - only visible within the same contract and not from derived contracts
+    - like external + forbidden access from derived contracts
+
+default visibility is internal
+
+making fields public, make them visible, but they're still readonly,
+(fields can only be changed within functions?)
+
+State changing functions are transactions
+
+## functions that do not require transactions
+keywords - view & pure
+view - reads some state but does not change it
+    - public variables are also "view functions"
+pure - purely do some type of math (no reading of state)
+    - eg "squareNumber(x) -> x * x"
+    
+
+WIP: 
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.6.0 <0.9.0;
+
+contract SimpleStorage {
+    /*
+    uint256 favoriteNumber = 5;
+    bool favoriteBool = true;
+    string favoriteString = "string";
+    int256 favInt = -5;
+    address favAddress = 0xe3e6aAf72a1296532d8Bba558ba5866f4E52C61d;
+    bytes32 favBytes = "cat"; // bytes[x] type has max size (x) of 32 and everything below.
+    */
+    // this will get initialized to 0
+    uint256 public favoriteNumber;
+
+    function store(uint256 _favoriteNumber) public {
+        favoriteNumber = _favoriteNumber;
+    }
+
+    function retrieve() public view returns(uint256) {
+        return favoriteNumber;
+    }
+}
