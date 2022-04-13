@@ -86,4 +86,25 @@ difficult on PoW blockchains because user would need to do a lot of mining
 if you contain the longest chain & you have 51% of the network nodes you can
 create a fork of the network and bring the network on your longest chain
 
+# Scalability
+Gas prices fluctuate. The bigger the demand (the more transactions are requested at the same time),
+the bigger gas prices become. 
+This is not scalable, because more people are wanting to get inside the same block 
+and they're pushing each other out while raising the gas price.
+There's a ceiling to how many people can use the system,
+because as gas prices keep rising, people won't be able to afford to perform transactions on the blockchain.
+
+# Sharding
+
+Blockchain of blockchains. There's a mainchain which coordinates all these other smaller blockchains. 
+This increses the amount of effective block space that there is,
+so more people can trade at lower cost/waiting times.
+
+# Layers
+layer 1
+any base layer blockchain implementation
+- BTC, ETH, Avalanche
+layer 2
+any applicaiton build on top of layer 1 
+
 
