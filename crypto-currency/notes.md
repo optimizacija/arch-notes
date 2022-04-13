@@ -60,4 +60,30 @@ PoW + longest chain rule together create the Nakamoto Consesus
 no matter how many fake users you create, you still need to provide PoW for each of them. 
 So you can't really easily fake your nodes
 
+- costs electricity -> environmental impact
+
+### PoS
+PoS nodes put collateral in the blockchain
+- that they're going to behave honestly
+if they missbehave, they're going to be slashed/removed from the network 
+and their staked funds will be taken away from them
+
+validators are randomly chosen which one is going to propose a valid block
+- and other nodes validate
+blockchains are deterministic, so we can't truly use random validators
+- ETH 2 uses "randout", this is a DAO that collectively chooses a random validator
+
+-> considered slightly less decentralized network due to staking cost 
+that's needed for participation
+
+# Attacks
+## Sybil attack
+- user creates a tonne of psuedo accounts to influence a network
+
+difficult on PoW blockchains because user would need to do a lot of mining
+
+## 51% attack
+if you contain the longest chain & you have 51% of the network nodes you can
+create a fork of the network and bring the network on your longest chain
+
 
