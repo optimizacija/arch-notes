@@ -104,7 +104,10 @@ so more people can trade at lower cost/waiting times.
 layer 1
 any base layer blockchain implementation
 - BTC, ETH, Avalanche
+
 layer 2
 any applicaiton build on top of layer 1 
+- chainlink, arbitrum, optimism
+    - arbitrum & optimism are rollups - they rollup their transaction into layer 1 ETH
 
 
