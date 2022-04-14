@@ -133,3 +133,22 @@ view - reads some state but does not change it
     - public variables are also "view functions"
 pure - purely do some type of math (no reading of state)
     - eg "squareNumber(x) -> x * x"
+
+## storage
+function parameters can have 2 kinds of storage: memory & storage
+memory - only stored during execution of the contract
+storage - data will, persist even after function executes
+
+strings are byte arrays, if you want a string in memory passed to a function,
+you have to specifically tell that it's a memory variable
+
+## Datastructures
+Arrays:
+- can be dynamic in size:
+People[] public people;
+
+- or static:
+People[3] public people;
+
+Mapping: (dictionary)
+mapping(string => uint256) public nameToFavoriteNumber;
