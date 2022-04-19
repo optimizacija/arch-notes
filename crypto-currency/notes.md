@@ -152,3 +152,73 @@ People[3] public people;
 
 Mapping: (dictionary)
 mapping(string => uint256) public nameToFavoriteNumber;
+- cannot be looped through, for that you'd have to declare an additional array
+
+tuple:
+- can be constructed like so
+(
+    uint80 roundId,
+    int256 answer,
+    uint256 startedAt,
+    uint256 updatedAt,
+    uint80 answeredInRound
+) = priceFeed.latestRoundData();
+
+## payable functions
+use payable keyword to define a function which can be used to pay for things.
+
+payable functions can receive (g)wei/eth
+- whenever you make a transaction to a payable function you can always append some value to it
+- non payable functions cannot receive any value
+- this value is not a part of function parameters, it lives outside of it
+- once the function is called with given amount of wei, the ownership of that money is transfered
+to the contract
+
+msg.sender - the address which sent the value
+msg.value - the amount of wei sent
+
+## Chainlink nodes
+- chainlink does not have nodes on simulated VMs, 
+so in order to interact with it, you need to deploy it to some test net
+
+## Importing
+imports specify a path to solidity contracts inside npm packages. When solidity file compiles,
+it copies the contents of the specified files to where the import statement is.
+import "@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol";
+
+most of the imported contracts are in fact interfaces. They're just like contracts,
+but they're missing function implementations.
+
+## Interfaces / ABI
+Interfaces compile down to ABIs
+ABI - Application Binary Interface
+- just tells solidity how it can interact with other contracts
+
+## using keyword
+using A for B;
+can be used to attach library functions from library A to any type B in the context of the contract.
+
+## Libraries
+- similar to contracts but they're deployed only once and their code is reused
+
+## require
+require statement stops execution & reverts the transaction if the condition is invalid
+on blockchain you'll see "Gas estimation failed error", along with a custom error message.
+
+## constructor
+Is exucuted when contract is deployed, before anything else
+- That's where you should define the owner 
+
+## modifiers
+- used to change behaviour of a function in declarative way.
+```
+modifier onlyOwner {
+    require(msg.sender == owner, "you're not the owner");
+     // wherever the _; statement is, this is where the rest of the code will be injected;
+    _;
+}
+
+function withdraw() payable onlyOwner public {
+    ...
+} 
+```
