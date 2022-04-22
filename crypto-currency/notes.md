@@ -242,3 +242,6 @@ And lastly, we can wait for confirmation that the contract was deploye / transac
 using web3 .call() methods will only simulate executing the transactions
 in order to actuall send a transaction to the blockchain we need to build one (with a new nonce),
 sign it, then send it to the block chain & then wait for its receit
+
+## Infura
+used for blockchain development - easily connect to testnet with provided url
