@@ -222,3 +222,23 @@ function withdraw() payable onlyOwner public {
     ...
 } 
 ```
+
+## Ganache
+Is a simulated / fake blockchain used for local development of smart contracts 
+- for even before putting it on the testnet
+
+## Deploying contracts
+To deploy contracts, you need to compile the solidity code
+and then build a transaction. To build a transaction we need to specify:
+- the chainId,
+- from address (address that will be responsible for creating this transaciton)
+- nonce (count of transactions on the account that is doing this transaction)
+Then we need to sign the transaction with account's private key
+and then send it on the blockchain
+And lastly, we can wait for confirmation that the contract was deploye / transaction was confirmed
+- we receive the so called transaction receipt
+
+## using deployed contracts
+using web3 .call() methods will only simulate executing the transactions
+in order to actuall send a transaction to the blockchain we need to build one (with a new nonce),
+sign it, then send it to the block chain & then wait for its receit
