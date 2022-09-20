@@ -21,6 +21,14 @@ For doing technical analysis on financial data install [ta-lib](https://github.c
 Enter Jupyter's container & in the terminal tab install ta-lib with `conda`.
 These instructions are copied over from ta-libs's github.
 
-```
+```bash
 conda install -c conda-forge ta-lib
+```
+
+## plotly
+
+Plotly is useful for showing candle stick charts. Install it with:
+
+```bash
+conda install -c plotly plotly=5.10.0
 ```
