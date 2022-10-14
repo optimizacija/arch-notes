@@ -32,3 +32,12 @@ Plotly is useful for showing candle stick charts. Install it with:
 ```bash
 conda install -c plotly plotly=5.10.0
 ```
+
+## fastai 
+
+For getting function add_datepart.
+
+```bash
+conda install -c fastchan fastai
+
+```
